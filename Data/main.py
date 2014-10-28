@@ -20,7 +20,9 @@ class const():
     date_index = 0
     type_index = 2
 
+
 now = datetime.datetime.now
+
 
 def display_menu(option):
     if option == 'a':
@@ -49,9 +51,9 @@ def display_menu(option):
 
 def main():
     lista = []
-    current_month = now.month
-    current_year = now.year
-    days = monthrange(current_year,current_month)
+    current_month = now().month
+    current_year = now().year
+    days = monthrange(current_year, current_month)[1]
     print(days)
     should_run = True
     dict_menu = {'a': add_menu,
